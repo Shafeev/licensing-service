@@ -1,4 +1,4 @@
-package ru.mcs.license;
+package ru.mcs.license.model;
 
 import lombok.Getter;
 import lombok.Setter;
