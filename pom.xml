@@ -15,7 +15,7 @@
     <description>Licensing service</description>
     <properties>
         <java.version>11</java.version>
-        <docker.image.prefix>ostok</docker.image.prefix>
+        <docker.image.prefix>simple-microservice</docker.image.prefix>
     </properties>
     <dependencies>
         <dependency>
@@ -52,12 +52,7 @@
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <!--  This plugin is used to create a docker image and publish the image to docker hub
-  -->
+            <!--  This plugin is used to create a docker image and publish the image to docker hub -->
             <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>dockerfile-maven-plugin</artifactId>
@@ -87,6 +82,9 @@
                     <image>
                         <name>${docker.image.prefix}/${project.artifactId}:latest</name>
                     </image>
+                    <layers>
+                        <enabled>true</enabled>
+                    </layers>
                 </configuration>
             </plugin>
         </plugins>
