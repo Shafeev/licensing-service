@@ -14,3 +14,9 @@ GET localhost:8080/v1/organization/simpleOrg/license/0235431845
 
 POST localhost:8080/v1/organization/simpleOrg/license
 ![Image](./img/post.png)
+
+PUT localhost:8080/v1/organization/simpleOrg/license
+![Image](./img/put.png)
+
+DELETE localhost:8080/v1/organization/simpleOrg/license/0235431845
+![Image](./img/delete.png)
